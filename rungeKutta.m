@@ -8,7 +8,7 @@ u0 - begynnelsevillkoren
 %}
 function out = rungeKutta(f, tspan, h, u0)
     [m, ~] = size(u0);
-    out = zeros(1 / h, m);
+    out = zeros((tspan(2) - tspan(1) )/h, m);
     un = u0; %senaste beräknade datapunkten
     t = tspan(1);
     iteration = 1; %steget algoritmen är på
